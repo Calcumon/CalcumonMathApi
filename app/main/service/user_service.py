@@ -1,7 +1,7 @@
 import uuid
 import datetime
 
-from app.main import db
+# from app.main import db
 from app.main.model.user import User
 
 
@@ -51,7 +51,7 @@ def generate_token(user):
         return response_object, 401
 
 
-def save_changes(data):
-    db.session.add(data)
-    db.session.commit()
+# def save_changes(data):
+#     db.session.add(data)
+#     db.session.commit()
 
