@@ -16,7 +16,7 @@ def index():
         phase1_guesses.append(math_api.gen_guesses(0, 10, 5, item[1]))
     message = {
         'status': 200,
-        'phase': phase1,
+        'eqn_ans': phase1,
         'guesses': phase1_guesses
     }
     resp = jsonify(message)
