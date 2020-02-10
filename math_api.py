@@ -13,14 +13,18 @@ def gen_eqns(int_range, num_params, step = 1):
 
 def choose_phase(phase):
   eqns = []
+  ans = []
   if phase == 1:
     for _ in range(9):
-      eqns.append(gen_eqns(10, 2))
+      tpl = gen_eqns(10, 2)
+      eqns.append(tpl[0])
+      ans.append(tpl[1])
+
   # if phase == 2:
   #   eqn = gen_eqn(20, 2)
   # if phase == 3:
   #   eqn = gen_eqn(20, 2)
-  return eqns
+  return eqns, ans
 
 def gen_guesses(start, end, num, ans): 
     res = []

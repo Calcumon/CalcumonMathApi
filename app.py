@@ -16,12 +16,13 @@ def index():
         phase1_guesses.append(math_api.gen_guesses(0, 10, 5, item[1]))
     message = {
         'status': 200,
-        'eqn_ans': phase1,
-        'guesses': phase1_guesses
+        'eqn': phase1[0],
+        'ans': phase1[1],
+        'guesses': math_api.gen_guesses(0, 10, 10, item[1])
     }
+    print(message)
     resp = jsonify(message)
     resp.status_code = 200
-    print(resp)
     return resp
 
 if __name__ == '__main__':
